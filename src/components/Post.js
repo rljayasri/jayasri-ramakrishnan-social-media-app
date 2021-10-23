@@ -8,6 +8,7 @@ function Post({ stateChanger }) {
   const [title, setTitle] = useState("");
   const [username, setUsername] = useState("");
   const [error, setError] = useState("");
+  const [image, setImage] = useState("");
 
   const createPost = async (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ function Post({ stateChanger }) {
       username: username,
       title: title,
       content: content,
+      image: image,
     };
     console.log(JSON.stringify(post));
     const config = {
@@ -33,6 +35,7 @@ function Post({ stateChanger }) {
       setContent("");
       setUsername("");
       setError("");
+      setImage("");
       stateChanger("new data");
       window.location.reload(false);
     }
@@ -70,6 +73,13 @@ function Post({ stateChanger }) {
           value={content}
           name="content"
           placeholder="Tell your story..."
+          type="text"
+        />
+        <input
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+          className="post__imageInput"
+          placeholder="Enter image URL(Optional)"
           type="text"
         />
         <Button type="submit" onClick={createPost} className="PostIt__Create">
