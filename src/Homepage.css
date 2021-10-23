@@ -1,0 +1,27 @@
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .Homepage::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .Homepage {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .Homepage_header {
+    color:#ffc107;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 15px 20px;
+  }
+  
+  .Homepage_header > h2 {
+    color: #ffc107;
+    font-size: 20px;
+    font-weight: 800;
+  }
