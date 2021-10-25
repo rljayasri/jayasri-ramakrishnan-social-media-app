@@ -15,7 +15,8 @@ function Homepage() {
         "https://posty-worker-api.jramakrishnan.workers.dev/api/posts"
       );
       const blogpostsResponse = await response.json();
-      setBlogPosts(blogpostsResponse);
+      const postsByTime = blogpostsResponse.reverse();
+      setBlogPosts(postsByTime);
     };
 
     getBlogPosts();
@@ -36,6 +37,7 @@ function Homepage() {
             displayName={post.username}
             title={post.title}
             text={post.content}
+            image={post.image}
           />
         ))}
       </FlipMove>
