@@ -1,1 +1,1 @@
-![Screenshot](fav.gif)
+![Screenshot](Fav.gif)
