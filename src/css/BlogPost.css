@@ -1,0 +1,79 @@
+.post {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+}
+
+.post__body {
+  flex: 1;
+  padding: 10px;
+}
+
+.post__body > img {
+  border-radius: 20px;
+}
+
+.post__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.post__headerText {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.post__headerDescription {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.post__love {
+  color: red;
+}
+
+.post__headerSpecial {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--posty);
+}
+
+.post__headerSpeciala {
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
+}
+
+.post__avatar {
+  padding: 20px;
+}
+
+.post__Counter {
+  font-size: 15px;
+}
+.post__form {
+  display: flex;
+  margin-top: 20px;
+  outline: none;
+}
+.post__input {
+  flex: 1;
+  outline: none;
+}
+.post__comments {
+  flex: 1;
+}
+.post__send {
+  border: none !important;
+  padding: 7px !important;
+  border-radius: 5px !important;
+  background-color: var(--posty) !important;
+  font-weight: 500 !important;
+  margin-right: 20px !important;
+  cursor: pointer;
+  color: white !important;
+}

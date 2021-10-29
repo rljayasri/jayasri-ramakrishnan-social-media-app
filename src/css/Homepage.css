@@ -1,0 +1,31 @@
+.Homepage::-webkit-scrollbar {
+  display: none;
+}
+
+.Homepage {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.Homepage_header {
+  display: flex;
+  color: var(--posty);
+  position: sticky;
+  top: 0;
+  font-size: 25px !important;
+  font-weight: 700;
+  background-color: white;
+  z-index: 100;
+}
+
+.Homepage_headerwarning {
+  font-size: 10px;
+  color: rgb(224, 138, 39);
+  padding-top: 20px;
+}
+
+.Homepage_header > h2 {
+  color: var(--posty);
+  font-size: 20px;
+  font-weight: 800;
+}
