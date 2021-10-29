@@ -1,1 +1,1 @@
-![Screenshot](Fav.gif)
+![Screenshot](demo/webappall.gif)
