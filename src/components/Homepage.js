@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Post from "./Post";
+import CreatePost from "./CreatePost";
 import BlogPost from "./BlogPost";
-import "../Homepage.css";
-
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import FlipMove from "react-flip-move";
+import "../css/Homepage.css";
+import "react-notifications/lib/notifications.css";
 
 function Homepage() {
   const [posts, setBlogPosts] = useState([]);
-  const [state, setState] = useState([]);
 
   useEffect(() => {
     const getBlogPosts = async () => {
@@ -15,7 +15,11 @@ function Homepage() {
         "https://posty-worker-api.jramakrishnan.workers.dev/api/posts"
       );
       const blogpostsResponse = await response.json();
-      const postsByTime = blogpostsResponse.reverse();
+      console.log(blogpostsResponse);
+      const postsByTime = blogpostsResponse.sort(function (a, b) {
+        return a.postedAt > b.postedAt ? -1 : 1;
+      });
+      console.log(postsByTime);
       setBlogPosts(postsByTime);
     };
 
@@ -25,10 +29,19 @@ function Homepage() {
   return (
     <div className="Homepage">
       <div className="Homepage_header">
-        <h2>Posty</h2>
+        <AutoAwesomeIcon />
+        <span className="Homepage_header">Posty</span>
+        <span className="Homepage_headerwarning">
+          *Changes may take up to 60 seconds to reflect in KV as per
+          <a href="https://developers.cloudflare.com/workers/runtime-apis/kv">
+            {" "}
+            docs
+          </a>
+          . If your post is not seen. Please refresh*
+        </span>
       </div>
 
-      <Post stateChanger={setState} />
+      <CreatePost />
 
       <FlipMove>
         {posts.map((post) => (
@@ -38,6 +51,9 @@ function Homepage() {
             title={post.title}
             text={post.content}
             image={post.image}
+            loved={post.love}
+            comments={post.comments}
+            postedAt={post.postedAt}
           />
         ))}
       </FlipMove>
