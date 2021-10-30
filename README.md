@@ -1,4 +1,4 @@
-# Posty App Pages link:  
+# Posty App Pages link:  https://jayasri-ramakrishnan-social-media-app.pages.dev/  
 # Demo:    
 ![Screenshot](demo/webapp-all.gif)  
 
