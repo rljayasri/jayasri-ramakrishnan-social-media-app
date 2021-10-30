@@ -4,7 +4,6 @@ import BlogPost from "./BlogPost";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import FlipMove from "react-flip-move";
 import "../css/Homepage.css";
-import "react-notifications/lib/notifications.css";
 
 function Homepage() {
   const [posts, setBlogPosts] = useState([]);
